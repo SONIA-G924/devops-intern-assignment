@@ -25,9 +25,9 @@ def db_status():
         version = cur.fetchone()
         cur.close()
         conn.close()
-        return f"✅ Connected to PostgreSQL: {version}"
+        return f"Connected to PostgreSQL: {version}"
     except Exception as e:
-        return f"❌ DB Error: {str(e)}"
+        return f"DB Error: {str(e)}"
 
 # ----- Task 8: Load ML Model -----
 iris = load_iris()
@@ -44,7 +44,7 @@ def predict():
 # ----- Task 1: Basic Flask Home Route -----
 @app.route('/')
 def home():
-    return "✅ DevOps Project: Flask + Prometheus + PostgreSQL + ML API"
+    return "DevOps Project: Flask + Prometheus + PostgreSQL + ML API"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
